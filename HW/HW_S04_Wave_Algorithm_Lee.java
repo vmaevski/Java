@@ -2,9 +2,7 @@
 // Строится ортогональный путь.
 public class S04_Wave_Algorithm_Lee {
     public static void get_wave(int field[][], int x_start, int y_start, int x_fin, int y_fin) {
-        // while (field[x_fin][y_fin] = 0) {
 
-        // }
         field[x_start][y_start] = 1;
         int count = 1;
         while (field[x_fin][y_fin] == 0) {
@@ -42,7 +40,7 @@ public class S04_Wave_Algorithm_Lee {
             if (i + 1 < field.length && field[i + 1][j] == field[i][j] - 1) {
                 field[i][j] = -10; // -10 обозначаем ячейку, куда делаем шаг
                 i++;
-                continue;              
+                continue;
             }
             if (j - 1 >= 0 && field[i][j - 1] == field[i][j] - 1) {
                 field[i][j] = -10; // -10 обозначаем ячейку, куда делаем шаг
@@ -64,22 +62,22 @@ public class S04_Wave_Algorithm_Lee {
             for (int j = 0; j < field[i].length; j++) {
                 if (i == x_fin & j == y_fin) {
                     s += "!F!\t";
-                } else{
+                } else {
                     if (field[i][j] == 0) {
                         s += " - \t";
                     }
                     if (field[i][j] == -1) {
                         s += " X \t";
-                    } 
+                    }
                     if (field[i][j] == 1) {
                         s += "!S!\t";
-                    } 
+                    }
                     if (field[i][j] > 1) {
                         s += " " + field[i][j] + "\t";
                     }
                     if (field[i][j] == -10) {
                         s += "<+>\t";
-                    } 
+                    }
                 }
             }
             s += "\n";
