@@ -1,6 +1,6 @@
 // Реализовать волновой алгоритм.
 // Строится ортогональный путь.
-public class S04_Wave_Algorithm_Lee {
+public class HW_S04_Wave_Algorithm_Lee {
     public static void get_wave(int field[][], int x_start, int y_start, int x_fin, int y_fin) {
 
         field[x_start][y_start] = 1;
